@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../../node_modules/bootstrap/scss/bootstrap';
+@import 'common';
+@import 'util';
+@import 'header';
+
+.btn-white {
+  color: #000;
+  background-color: #fff;
+  border-color: #999;
+  outline: none;
+  &:not(:disabled):not(.disabled).active {
+    background: #333;
+    color: #fff;
+  }
+}
+.btn-group-lg {
+  > .btn {
+    padding: 0.5rem 1.27rem;
+  }
+}
