@@ -4,11 +4,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { NpspersonalComponent } from './npspersonal/npspersonal.component';
 import { NpsinfoComponent } from './npsinfo/npsinfo.component';
 
+import { WizardGuard } from './nps-wizard/wizard-guard.service';
+import { NpswizardService } from './nps-wizard/npswizard.service';
 
 export const appRoutes: Routes = [
-  { path: 'personal', component: NpspersonalComponent },
   { path: 'info', component: NpsinfoComponent },
-  { path: '',   redirectTo: '/info', pathMatch: 'full' },
+  { path: 'personal', component: NpspersonalComponent, canActivate: [WizardGuard] },
+  { path: '', redirectTo: '/info', pathMatch: 'full' },
   { path: '**', component: NpsinfoComponent }
 ];
 
@@ -17,4 +19,4 @@ export const appRoutes: Routes = [
   exports: [RouterModule]
 })
 
-export class AppRoutingModule {}
+export class AppRoutingModule { }

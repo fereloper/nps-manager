@@ -7,17 +7,22 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AppRoutingModule }   from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { NpsinfoComponent } from './npsinfo/npsinfo.component';
 import { NpspersonalComponent } from './npspersonal/npspersonal.component';
+import { NpsfooterComponent } from './npsfooter/npsfooter.component';
 
+import { FormDataService } from './data/formData.service';
+import { NpswizardService } from './nps-wizard/npswizard.service';
+import { WizardGuard }        from './nps-wizard/wizard-guard.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     NpsinfoComponent,
-    NpspersonalComponent
+    NpspersonalComponent,
+    NpsfooterComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +30,9 @@ import { NpspersonalComponent } from './npspersonal/npspersonal.component';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [{ provide: FormDataService, useClass: FormDataService },
+  { provide: NpswizardService, useClass: NpswizardService },
+  { provide: WizardGuard, useClass: WizardGuard }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

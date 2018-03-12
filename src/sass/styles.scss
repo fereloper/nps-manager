@@ -3,6 +3,11 @@
 @import 'common';
 @import 'util';
 @import 'header';
+@import 'footer';
+
+.btn {
+  border-radius: 0;
+}
 
 .btn-white {
   color: #000;
