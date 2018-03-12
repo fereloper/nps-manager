@@ -21,7 +21,6 @@ export class WizardGuard implements CanActivate {
   verifyWorkFlow(path): boolean {
     console.log("Entered '" + path + "' path.");
 
-    // If any of the previous steps is invalid, go back to the first invalid step
     let firstPath = this.wizardService.getFirstInvalidStep(path);
     if (firstPath.length > 0) {
       console.log("Redirected to '" + firstPath + "' path which it is the first invalid step.");

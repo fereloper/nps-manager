@@ -2,25 +2,6 @@
 @import '../../node_modules/bootstrap/scss/bootstrap';
 @import 'common';
 @import 'util';
+@import 'inputs';
 @import 'header';
 @import 'footer';
-
-.btn {
-  border-radius: 0;
-}
-
-.btn-white {
-  color: #000;
-  background-color: #fff;
-  border-color: #999;
-  outline: none;
-  &:not(:disabled):not(.disabled).active {
-    background: #333;
-    color: #fff;
-  }
-}
-.btn-group-lg {
-  > .btn {
-    padding: 0.5rem 1.27rem;
-  }
-}

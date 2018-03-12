@@ -1,0 +1,47 @@
+.btn {
+  border-radius: 0;
+}
+
+.btn-white {
+  color: #000;
+  background-color: #fff;
+  border-color: #999;
+  outline: none;
+  &:not(:disabled):not(.disabled).active {
+    background: #333;
+    color: #fff;
+  }
+}
+.btn-group-toggle {
+    > .btn {
+      padding: 0.5rem .67rem;
+    }
+  }
+@include media-breakpoint-up(xs) { 
+  .btn-group-toggle {
+    > .btn {
+      padding: 0.5rem .67rem;
+    }
+  }
+ }
+@include media-breakpoint-up(sm) { 
+  .btn-group-toggle {
+    > .btn {
+      padding: 0.5rem .80rem;
+    }
+  }
+ }
+@include media-breakpoint-up(md) { 
+  .btn-group-toggle {
+    > .btn {
+      padding: 0.5rem .9rem;
+    }
+  }
+ }
+@include media-breakpoint-up(lg) { 
+  .btn-group-toggle {
+    > .btn {
+      padding: 0.5rem 1.27rem;
+    }
+  }
+ }

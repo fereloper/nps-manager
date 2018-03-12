@@ -17,7 +17,6 @@ export class NpspersonalComponent implements OnInit {
 
   ngOnInit() {
     this.personalInfo = this.formDataService.getPersonal();
-    console.log('Personal feature loaded!');
   }
 
   save(form: any): boolean {
