@@ -28,6 +28,12 @@ export class NpspersonalComponent implements OnInit {
     return true;
   }
 
+  submit(form: any) {
+    if (this.save(form)) {
+      this.router.navigate(['/result']);
+    }
+  }
+
   goToPrev() {
     this.router.navigate(['/info']);
   }

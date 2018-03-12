@@ -18,7 +18,6 @@ export class NpsinfoComponent implements OnInit {
 
   ngOnInit() {
     this.information = this.formDataService.getInformation();
-    console.log('Info feature loaded!');
   }
 
   save(form: any): boolean {
@@ -31,7 +30,6 @@ export class NpsinfoComponent implements OnInit {
 
   goToNext(form: any) {
     if (this.save(form)) {
-      // Navigate to the work page
       this.router.navigate(['/personal']);
     }
   }

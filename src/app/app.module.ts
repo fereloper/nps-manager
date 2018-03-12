@@ -15,6 +15,7 @@ import { NpsfooterComponent } from './npsfooter/npsfooter.component';
 import { FormDataService } from './data/formData.service';
 import { NpswizardService } from './nps-wizard/npswizard.service';
 import { WizardGuard }        from './nps-wizard/wizard-guard.service';
+import { NpsresultComponent } from './npsresult/npsresult.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { WizardGuard }        from './nps-wizard/wizard-guard.service';
     NavbarComponent,
     NpsinfoComponent,
     NpspersonalComponent,
-    NpsfooterComponent
+    NpsfooterComponent,
+    NpsresultComponent
   ],
   imports: [
     BrowserModule,
