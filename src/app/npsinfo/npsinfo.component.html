@@ -23,6 +23,7 @@
               <label ngbButtonLabel class="btn-white"><input ngbButton type="radio" [value]="9"> 9 </label>
               <label ngbButtonLabel class="btn-white"><input ngbButton type="radio" [value]="10"> 10 </label>
             </div>
+            <div class="text-danger" [hidden]="rate.valid">Please select rating point</div>
           </div>
           <div class="form-group">
             <label for="recommend">Do you recommend our product?</label>
@@ -30,10 +31,11 @@
               <option value="y" selected>Yes</option>
               <option value="n">No</option>
             </select>
+            <div class="text-danger" [hidden]="recommend.valid">Please select an option</div>
           </div>
           <div class="form-group">
             <label for="improve">How should we improve our product?</label>
-            <textarea class="form-control" id="improve" rows="3" #improve="ngModel" required name="improve" [(ngModel)]="information.improve"></textarea>
+            <textarea class="form-control" id="improve" rows="3" #improve="ngModel" name="improve" [(ngModel)]="information.improve"></textarea>
           </div>
           <button type="submit" class="btn btn-primary float-right" [disabled]="!infoForm.valid" (click)="goToNext(infoForm)">Next</button>
         </form>
