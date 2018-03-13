@@ -10,6 +10,7 @@ import { NpswizardService } from './npswizard.service';
 
 @Injectable()
 export class WizardGuard implements CanActivate {
+  
   constructor(private router: Router, private wizardService: NpswizardService) { }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
