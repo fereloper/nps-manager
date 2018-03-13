@@ -2,23 +2,32 @@ header {
   padding: 8px 0;
   border-bottom: 1px solid #d9e1e6;
 }
-#logo-home h1 a {
-  width: 100px;
-  height: 45px;
-  display: block;
-  background-image: url(../assets/images/logo.png);
-  background-repeat: no-repeat;
-  background-position: left top;
-  background-size: 100px 55px;
-  text-indent: -9999px;
+#logo-home {
+  h1 {
+    a {
+      width: 100px;
+      height: 45px;
+      display: block;
+      background-image: url(../assets/images/logo.png);
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: 100px 55px;
+      text-indent: -9999px;
+    }
+  }
 }
-#social ul {
-  margin: 0 10px 0 0;
-  padding: 0;
-}
-
-#social ul li {
-  float: left;
-  margin: 0 5px 10px 0;
-  list-style: none;
+#social {
+  padding-top: 10px;
+  ul {
+    margin: 0 10px 0 0;
+    padding: 0;
+    li {
+      float: left;
+      margin: 0 5px 10px 0;
+      list-style: none;
+      .fa {
+        color: #000;
+      }
+    }
+ }
 }
