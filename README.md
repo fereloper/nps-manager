@@ -7,8 +7,9 @@ There are two different project for client and api.
 **If you are using vagrant, please follow these steps:**
 1. Goto nps-api folder
 2. Copy the `.env.example` to `.env`
-2. Run `vagrant up` (It will take some time since it will download the vagrant box)
-3. API is ready now
+3. Run command `composer install`
+4. Run `vagrant up` (It will take some time since it will download the vagrant box)
+5. API is ready now
 
 **If you don't use vagrant:**
 1. Create a database in your local machine
