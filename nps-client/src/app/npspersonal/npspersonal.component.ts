@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { Information, Personal } from '../data/formData.model';
 import { FormDataService } from '../data/formData.service';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-npspersonal',
@@ -25,7 +26,7 @@ export class NpspersonalComponent implements OnInit {
       return false;
     }
     this.formDataService.setPersonal(this.personalInfo);
-    this.http.post('http://192.168.10.10/api/rating', this.formDataService.getFormData())
+    this.http.post(environment.apiUrl + '/rating', this.formDataService.getFormData())
       .subscribe(
         res => {
           console.log(res);
@@ -34,7 +35,7 @@ export class NpspersonalComponent implements OnInit {
           console.log("Error occured");
         }
       );
-    return true;
+      return true;
   }
 
   submit(form: any) {
