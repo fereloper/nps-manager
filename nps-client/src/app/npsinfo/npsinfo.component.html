@@ -11,7 +11,7 @@
           <div class="form-group">
             <label class="float-left">Not Likely</label>
             <label class="float-right">Extremely Likely</label>
-            <div class="btn-group btn-group-toggle btn-group-lg" ngbRadioGroup #rate="ngModel" name="rate" [(ngModel)]="information.rate" required>
+            <div class="btn-group btn-group-toggle btn-group-lg" ngbRadioGroup #rating="ngModel" name="rating" [(ngModel)]="information.rating" required>
               <label ngbButtonLabel class="btn-white"><input ngbButton type="radio" [value]="1"> 1 </label>
               <label ngbButtonLabel class="btn-white"><input ngbButton type="radio" [value]="2"> 2 </label>
               <label ngbButtonLabel class="btn-white"><input ngbButton type="radio" [value]="3"> 3 </label>
@@ -23,7 +23,7 @@
               <label ngbButtonLabel class="btn-white"><input ngbButton type="radio" [value]="9"> 9 </label>
               <label ngbButtonLabel class="btn-white"><input ngbButton type="radio" [value]="10"> 10 </label>
             </div>
-            <div class="text-danger" [hidden]="rate.valid">Please select rating point</div>
+            <div class="text-danger" [hidden]="rating.valid">Please select rating point</div>
           </div>
           <div class="form-group">
             <label for="recommend">Do you recommend our product?</label>

@@ -2,7 +2,7 @@ export class FormData {
   name: string = '';
   email: string = '';
   gender: string = '';
-  rate: string = '';
+  rating: string = '';
   recommend: string = '';
   improve: string = '';
 
@@ -10,14 +10,14 @@ export class FormData {
       this.name = '';
       this.email = '';
       this.gender = '';
-      this.rate = '';
+      this.rating = '';
       this.recommend = '';
       this.improve = '';
   }
 }
 
 export class Information {
-  rate: string = '';
+  rating: string = '';
   recommend : string = '';
   improve: string = '';
 }

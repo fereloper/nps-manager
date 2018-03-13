@@ -37,7 +37,7 @@ export class FormDataService {
   getInformation(): Information {
     // Return the Address data
     var address: Information = {
-      rate: this.formData.rate,
+      rating: this.formData.rating,
       recommend: this.formData.recommend,
       improve: this.formData.improve
     };
@@ -47,7 +47,7 @@ export class FormDataService {
   setInformation(data: Information) {
     // Update the Address data only when the Address Form had been validated successfully
     this.isInformationFormValid = true;
-    this.formData.rate = data.rate;
+    this.formData.rating = data.rating;
     this.formData.recommend = data.recommend;
     this.formData.improve = data.improve;
     this.wizardService.validateStep('info');

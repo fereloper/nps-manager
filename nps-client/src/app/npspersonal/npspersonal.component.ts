@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 import { Information, Personal } from '../data/formData.model';
 import { FormDataService } from '../data/formData.service';
@@ -13,7 +14,7 @@ export class NpspersonalComponent implements OnInit {
   personalInfo: Personal;
   form: any;
 
-  constructor(private router: Router, private formDataService: FormDataService) { }
+  constructor(private router: Router, private formDataService: FormDataService, private http: HttpClient) { }
 
   ngOnInit() {
     this.personalInfo = this.formDataService.getPersonal();
@@ -24,6 +25,15 @@ export class NpspersonalComponent implements OnInit {
       return false;
     }
     this.formDataService.setPersonal(this.personalInfo);
+    this.http.post('http://192.168.10.10/api/rating', this.formDataService.getFormData())
+      .subscribe(
+        res => {
+          console.log(res);
+        },
+        err => {
+          console.log("Error occured");
+        }
+      );
     return true;
   }
 
