@@ -29,13 +29,12 @@ export class NpspersonalComponent implements OnInit {
     this.http.post(environment.apiUrl + '/rating', this.formDataService.getFormData())
       .subscribe(
         res => {
-          console.log(res);
+          return true;
         },
         err => {
-          console.log("Error occured");
+          return true;
         }
       );
-      return true;
   }
 
   submit(form: any) {
