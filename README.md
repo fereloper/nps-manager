@@ -21,8 +21,9 @@ There are two different project for client and api.
 ## Installing NPS-Client:
 1. Goto nps-client folder
 2. Install `angular-cli` if it is not installed in your computer. `npm install -g @angular/cli`. Remember you need node and npm installed in your computer.
-3. If you aren't using vagrant for API, please update `nps-client/src/environments.environments.ts` as follow
-   Change the `apiUrl: 'http://192.168.10.10/api'` to `apiUrl: 'http://127.0.0.1/api'`.
+3. If you aren't using vagrant for API, please follow the instruction below (*Please skip this if you are using vagrant*):
+   * Open `nps-client/src/environments.environments.ts`
+   * Change the `apiUrl: 'http://192.168.10.10/api'` to `apiUrl: 'http://127.0.0.1/api'`.
 4. Run `ng serve --open`
 4. Now the app can be accessed from the http://localhost:4200/
 
