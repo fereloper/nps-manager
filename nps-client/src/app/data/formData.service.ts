@@ -14,7 +14,6 @@ export class FormDataService {
   }
 
   getPersonal(): Personal {
-    // Return the Personal data
     var personal: Personal = {
       name: this.formData.name,
       email: this.formData.email,
@@ -24,18 +23,15 @@ export class FormDataService {
   }
 
   setPersonal(data: Personal) {
-    // Update the Personal data only when the Personal Form had been validated successfully
     this.isPersonalFormValid = true;
     this.formData.name = data.name;
     this.formData.gender = data.gender;
     this.formData.email = data.email;
 
-     // Validate Personal Step in Workflow
-     this.wizardService.validateStep('personal');
+    this.wizardService.validateStep('personal');
   }
 
   getInformation(): Information {
-    // Return the Address data
     var address: Information = {
       rating: this.formData.rating,
       recommend: this.formData.recommend,
@@ -45,7 +41,6 @@ export class FormDataService {
   }
 
   setInformation(data: Information) {
-    // Update the Address data only when the Address Form had been validated successfully
     this.isInformationFormValid = true;
     this.formData.rating = data.rating;
     this.formData.recommend = data.recommend;
@@ -54,20 +49,12 @@ export class FormDataService {
   }
 
   getFormData(): FormData {
-    // Return the entire Form Data
     return this.formData;
   }
 
   resetFormData(): FormData {
-    // Return the form data after all this.* members had been reset
     this.formData.clear();
     this.isPersonalFormValid = this.isInformationFormValid = false;
     return this.formData;
-  }
-
-  isFormValid() {
-    // Return true if all forms had been validated successfully; otherwise, return false
-    return this.isPersonalFormValid &&
-      this.isInformationFormValid
   }
 }
