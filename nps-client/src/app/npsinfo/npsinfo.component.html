@@ -37,7 +37,9 @@
             <label for="improve">How should we improve our product?</label>
             <textarea class="form-control" id="improve" rows="3" #improve="ngModel" name="improve" [(ngModel)]="information.improve"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary float-right" [disabled]="!infoForm.valid" (click)="goToNext(infoForm)">Next</button>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary float-right" [disabled]="!infoForm.valid" (click)="goToNext(infoForm)">Next</button>
+          </div>
         </form>
       </div>
     </div>

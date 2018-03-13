@@ -15,8 +15,13 @@
 .btn-group-toggle {
     > .btn {
       padding: 0.5rem .67rem;
-    }
   }
+}
+.form-actions {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
 @include media-breakpoint-up(xs) { 
   .btn-group-toggle {
     > .btn {
